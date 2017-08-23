@@ -1,44 +1,20 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
 
 public class TestClass {
-    static double firstNum = 5;
-    static double secondNum = 6;
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число х:");
+        double x = Double.parseDouble(reader.readLine());
+        System.out.println("Введите число y:");
+        double y = Double.parseDouble(reader.readLine());
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введи первое число");
-        fistNum = scanner.next.Double();
-        System.out.println("Введите второе число");
-        fistNum = scanner.next.Double();
-        double result = divNumbers(firstNum,secondNum);
-        int result1 = addNumbes(firstNum, secondNum);
-        int result2 = getNumbres1(firstNum, secondNum);
-        int result3 = getNambers2(firstNum, secondNum);
-        int result4 = getNumber3(firstNum, secondNum);
-
-        String resultString = String.format("result2 is %s", result1);
-        System.out.println(resultString);
-        System.out.println("result is " + result1);
-        System.out.println("result is " + result2);
-        System.out.println("result is " + result3);
-        System.out.println("result is " + result4);
+        System.out.println("Результат: " + f(x, y));
 
     }
 
-    public static int addNumbes(int firstNamber, int secondNamber) {
-        return firstNamber + secondNamber;
-    }
-
-    public static int getNumbres1(int firstNamber, int secondNamber) {
-        return firstNamber * secondNamber;
-    }
-
-    public static int getNambers2(int firstNamber, int secondNamber) {
-        return firstNamber / secondNamber;
-    }
-
-    public static int getNumber3(int firstNamber, int secondNamber) {
-        return firstNamber - secondNamber;
+    private static double f(double x, double y) {
+        return 3 * (x + 2 * x - y) / (2 * x);
     }
 }
-/* 3
